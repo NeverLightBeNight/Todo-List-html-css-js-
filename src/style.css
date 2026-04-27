@@ -11,3 +11,109 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.todo {
+    min-width: 250px;
+    width: 400px;
+    min-height: 550px;
+    box-shadow:  0 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 1rem;
+}
+
+.todo h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.todo__container--display {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    margin: 20px 0px;
+}
+
+.todo__container--display input {
+    border: none;
+    outline: none;
+    height: 40px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .1);
+    padding-left: 1rem;
+    padding-right: .5rem;
+}
+
+.todo__container--display input::placeholder {
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+.todo__container--display button {
+    border: none;
+    background: #228B22;
+    color: #fff;
+    letter-spacing: 2px;
+    height: 40px;
+    min-width: 50px;
+    cursor: pointer;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    padding-inline: 1rem;
+    transition: background .16s linear;
+}
+
+.todo__container--display button:hover {
+    background: rgba(34, 139, 34, .9);
+}
+
+.list__tasks {
+    width: 100%;
+    flex-grow: 1;
+    list-style: none;
+    overflow-x: hidden;
+    display: flex;
+    overflow-y: auto; 
+    align-items: flex-start;
+}
+
+.list__tasks--task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.list__tasks--task p {
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 380px) {
+    .todo__container--display {
+        flex-direction: column;
+    }
+    .todo__container--display button {
+        width: 100%;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .todo__container--display input {
+        width: 100%;
+        height: 40px;
+    }
+}
