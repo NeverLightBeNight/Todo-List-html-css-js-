@@ -83,6 +83,8 @@ body {
     display: flex;
     overflow-y: auto; 
     align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .list__tasks--task {
@@ -91,15 +93,41 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background: #333;
+    padding: .8rem 2rem;
+    color: #fff;
 }
 
 .list__tasks--task p {
     flex-grow: 1;
     min-width: 0;
-    max-width: 85%;
+    max-width: 55%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.list__tasks--task input {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.done {
+    background: green;
+}
+
+.btn__remove {
+    min-width: 60px;
+    border: none;
+    background: red;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: .2rem 1rem;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 @media (max-width: 380px) {
